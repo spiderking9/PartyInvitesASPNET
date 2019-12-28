@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dziekujemy</title>
+</head>
+<body>
+    <p>
+        <h1>dziekujemy, @Model.Name</h1>
+        @if (Model.WillAttend==true)
+        {
+            @:cieszymy sie ze przyjdziesz do nas Napoje sa juz w lodowce
+        }
+        else
+        {
+            @:przykro nam ze nie mozesz sie zjawic
+        }
+    </p>
+    <p>kliknij <a asp-action="ListResponses">tutaj</a> aby wyswietlic liste gosci</p>
+</body>
+</html>
+

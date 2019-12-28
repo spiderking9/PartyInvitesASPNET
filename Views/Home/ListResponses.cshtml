@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odpowiedzi</title>
+</head>
+<body>
+    <h2>oto lista gosci na przyjeciu</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>imie i nazwisko</th>
+                <th>Adres email</th>
+                <th>Numer tel</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PartyInvites.Models.GuestResponse r in Model)
+            {
+            <tr>
+                <td>@r.Name</td>
+                <td>@r.Email</td>
+                <td>@r.Phone</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <div></div>
+</body>
+</html>
+
